@@ -4,18 +4,6 @@
 // This is NOT a complete app - just isolated examples of the skills.
 
 // ---------------------------------------------------------
-// Module: Values, Data Types, and Operations
-// Pseudocode:
-//   1. Store a task count as a number
-//   2. Use a comparison operation to get a boolean (are there any tasks?)
-//   3. Use a string (template literal) to describe the result
-// ---------------------------------------------------------
-let taskCount = 4; // number - how many tasks are in the list
-let hasTasks = taskCount > 0; // boolean - result of a comparison operation
-console.log(`Total tasks: ${taskCount}`); // string - combines the number into a message
-console.log(hasTasks); // true - confirms the comparison operation worked
-
-// ---------------------------------------------------------
 // Module: Stringing Characters Together
 // Pseudocode:
 //   1. Take in raw task text typed by a user
@@ -83,3 +71,15 @@ console.log(pendingTasks);
 for (let i = 0; i < tasks.length; i++) { // loop - repeats once per task in the array
   console.log(`${tasks[i].text} - ${getStatusLabel(tasks[i].complete)}`);
 }
+
+// ---------------------------------------------------------
+// Module: Values, Data Types, and Operations
+// Pseudocode:
+//   1. Get the real task count from the tasks array (a number)
+//   2. Use a comparison operation to get a boolean (are there any tasks?)
+//   3. Use a string (template literal) to describe the result
+// ---------------------------------------------------------
+let taskCount = tasks.length; // number - actual count, pulled straight from the array
+let hasTasks = taskCount > 0; // boolean - result of a comparison operation
+console.log(`Total tasks: ${taskCount}`); // string - combines the number into a message
+console.log(hasTasks); // true - confirms the comparison operation worked
